@@ -12,6 +12,12 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
+  List<String> quotes = [
+    'Be yourself; everyone else is already taken',
+    "You miss 100% of the shots you don't take",
+    'Hard work always beats talent'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +30,7 @@ class _QuoteListState extends State<QuoteList> {
           backgroundColor: Colors.redAccent,
         ),
         body: Column(
-          children: [],
+          children: quotes.map((quote) => Text(quote)).toList(),
         ));
   }
 }
